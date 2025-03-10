@@ -1,3 +1,6 @@
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * @author danieldevlin
  * @date 04/03/2025
@@ -8,14 +11,14 @@ public class Main {
     public static void main(String[] args) {
         // Press Opt+Enter with your caret at the highlighted text to see how
         // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
-        // Press Ctrl+R or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        // Using lambda to filter even numbers and summing them
+        int sumEven = numbers.stream()
+                .filter(n -> n % 2 == 0)      // Filter even numbers
+                .mapToInt(s -> s)  // Convert to int
+                .sum();                      // Sum the even numbers
 
-            // Press Ctrl+D to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Cmd+F8.
-            System.out.println("i = " + i);
-        }
+        System.out.println("Sum of even numbers: " + sumEven);  // Expected output: 30
     }
 }
