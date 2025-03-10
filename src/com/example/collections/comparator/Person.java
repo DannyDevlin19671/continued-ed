@@ -61,7 +61,7 @@ public class Person {
         if (o == null || getClass() != o.getClass()) return false;
         // Cast and compare fields
         Person person = (Person) o;
-        return age == person.age && Objects.equals(name, person.name);
+        return age == person.age && name.equals(person.name);
     }
 
     // Overriding hashCode() method
