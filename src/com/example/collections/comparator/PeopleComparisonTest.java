@@ -15,6 +15,7 @@ public class PeopleComparisonTest {
         people.add(new Person("Ethan", 18));
         people.add(new Person("Emma", 14));
         people.add(new Person("Sarah", 31));
+        people.add(new Person("Adam", 45));
 
         people.sort(new PeopleComparator());
         for(Person person: people){
