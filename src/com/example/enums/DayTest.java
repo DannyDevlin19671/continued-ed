@@ -12,9 +12,9 @@ public class DayTest {
         System.out.println("Today is: " + today);
 
         // Loop through all enum values
-        //for (Day d : Day.values()) {
-            //System.out.println(d);
-        //}
+        for (Day d : Day.values()) {
+            System.out.println(d);
+        }
 
         System.out.println("Today is: " + today);
         printDayMessage(today);
