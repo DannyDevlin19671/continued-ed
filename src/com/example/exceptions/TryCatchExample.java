@@ -5,7 +5,7 @@ package com.example.exceptions;
  * @date 17/03/2025
  * @project continued-ed
  */
-public class TryCatchExample {
+public class TryCatchExample{
     public static void main(String[] args) {
         try {
             int result = 10 / 0; // This will throw ArithmeticException
