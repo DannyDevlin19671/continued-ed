@@ -26,9 +26,21 @@ public class JpaexampleApplication {
 			log.info("Completed saving customers");
 			log.info("==========================");
 
-			Customer customer = repository.findById(1L);
-			log.info("Customer found with Id=(1L)");
-			log.info(customer.toString());
+
+			try{
+				Customer customer = repository.findById(18L);
+				if(customer == null){
+					throw new CustomerNotFoundException(18L);
+				}
+				log.info("Customer found with Id=(1L)");
+				log.info(customer.toString());
+			}catch(CustomerNotFoundException ex){
+				log.error(ex.toString());
+			}
+
+			Customer customerTwo = repository.findByfirstName("Daniel").getFirst();
+			log.info("Customer found with firstName Daniel");
+			log.info(customerTwo.toString());
 		});
 	}
 

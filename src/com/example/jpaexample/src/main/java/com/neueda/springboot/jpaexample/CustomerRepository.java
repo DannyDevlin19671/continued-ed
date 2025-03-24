@@ -11,6 +11,7 @@ import java.util.List;
  */
 public interface CustomerRepository extends JpaRepository<Customer, Long> {
     List<Customer> findByLastName(String lastName);
+    List<Customer> findByfirstName(String firstName);
     // find by last name
     Customer findById(long id);
 }
